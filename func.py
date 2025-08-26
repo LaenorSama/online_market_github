@@ -1,13 +1,28 @@
 import random
+import pytest
 
-def lucky_step(chance=0.1):
+
+def lucky_step(chance: float = 0.1) -> None:
     """
-    С вероятностью `chance` выбрасывает случайную ошибку из списка.
-
-    :param chance: вероятность ошибки (0.0–1.0), по умолчанию 0.1 (10%)
+    С вероятностью `chance` ломает тест.
+    Возможные исходы:
+      - Failed (AssertionError)
+      - Broken (любая runtime-ошибка)
+      - Skipped (pytest.skip)
     """
+    if not 0 <= chance <= 1:
+        raise ValueError("Параметр 'chance' должен быть в диапазоне от 0 до 1")
 
-    ERROR_TYPES = [IndexError, ValueError, TypeError, KeyError]
-    if random.random() < chance:  # 10% шанс на ошибку
-        error_type = random.choice(ERROR_TYPES)  # случайно выбираем тип ошибки
-        raise error_type(f'Случайная ошибка: {error_type.__name__}')
+    if random.random() < chance:
+        outcome = random.choice(["failed", "broken", "skipped"])
+
+        if outcome == "failed":
+            raise AssertionError("Случайная ошибка: тест упал (failed)")
+
+        elif outcome == "broken":
+            error_types = [ValueError, TypeError, KeyError]
+            error_type = random.choice(error_types)
+            raise error_type(f"Случайная ошибка: тест сломался ({error_type.__name__})")
+
+        elif outcome == "skipped":
+            pytest.skip("Случайная ошибка: тест пропущен")
