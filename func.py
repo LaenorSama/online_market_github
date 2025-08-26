@@ -1,23 +1,26 @@
 import random
 import pytest
 
-
-def lucky_step(chance: float = 0.3) -> None:
+def lucky_step(chance: float = 0.5) -> None:
     """
     С вероятностью `chance` ломает тест.
-    Возможные исходы:
-      - Failed (AssertionError)
-      - Broken (любая runtime-ошибка)
-      - Skipped (pytest.skip)
+    Возможные исходы с весами:
+      - Failed (AssertionError) 50%
+      - Broken (ValueError, TypeError, KeyError) 30%
+      - Skipped (pytest.skip) 20%
     """
     if not 0 <= chance <= 1:
         raise ValueError("Параметр 'chance' должен быть в диапазоне от 0 до 1")
 
     if random.random() < chance:
-        outcome = random.choice(["failed", "broken", "skipped"])
+        outcome = random.choices(
+            ["failed", "broken", "skipped"],
+            weights=[50, 30, 20],
+            k=1
+        )[0]
 
         if outcome == "failed":
-            raise AssertionError("Случайная ошибка: тест упал (failed)")
+            pytest.fail("Случайная ошибка: тест упал (failed)")
 
         elif outcome == "broken":
             error_types = [ValueError, TypeError, KeyError]
