@@ -2,7 +2,7 @@ import random
 import pytest
 
 
-def lucky_step(chance: float = 0.1) -> None:
+def lucky_step(chance: float = 0.3) -> None:
     """
     С вероятностью `chance` ломает тест.
     Возможные исходы:
