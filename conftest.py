@@ -1,0 +1,22 @@
+# conftest.py
+import os
+import pytest
+from func import *  # импортируем твою функцию
+
+@pytest.fixture(autouse=True)
+def apply_lucky_sleep_conditionally():
+    """
+    Выполняется только если заданы переменные окружения LUCKY_SLEEP_MIN и LUCKY_SLEEP_MAX.
+    """
+    min_env = os.getenv("LUCKY_SLEEP_MIN")
+    max_env = os.getenv("LUCKY_SLEEP_MAX")
+
+    # Если хотя бы одна из переменных не задана, фикстура пропускается
+    if min_env is None or max_env is None:
+        return
+
+    # Преобразуем в int
+    min_seconds = int(min_env)
+    max_seconds = int(max_env)
+
+    lucky_sleep(min_seconds, max_seconds)

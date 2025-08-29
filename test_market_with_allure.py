@@ -9,7 +9,6 @@ from func import *
 @allure.feature("Авторизация")
 @allure.story("Восстановление пароля")
 def test_pass_reset():
-    lucky_sleep()
     with allure.step("Открыть главную страницу сайта"):
         pass
     with allure.step("Нажать кнопку Забыли пароль?"):
@@ -50,7 +49,6 @@ def test_pass_reset():
 @allure.feature("Авторизация")
 @allure.story("Не успешная авторизация")
 def test_auth_error():
-    lucky_sleep()
     with allure.step("Открыть главную страницу сайта"):
         pass
     with allure.step("Ввести email: test.ivanov@example.com"):
@@ -70,7 +68,6 @@ def test_auth_error():
 @allure.feature("Поиск товаров")
 @allure.story("Основной поиск")
 def test_main_search_with_sort():
-    lucky_sleep()
     with allure.step("Перейти в каталог товаров"):
         pass
     with allure.step("В поле поиска ввести Розовый пони"):
@@ -119,7 +116,6 @@ def test_main_search_with_sort():
 @allure.feature("Поиск товаров")
 @allure.story("Основной поиск")
 def test_search_missing_item():
-    lucky_sleep()
     with allure.step("Перейти в каталог товаров"):
         pass
     with allure.step("В поле поиска ввести Розовый пони"):
@@ -137,7 +133,6 @@ def test_search_missing_item():
 @allure.feature("Поиск товаров")
 @allure.story("Основной поиск")
 def test_article_search():
-    lucky_sleep()
     with allure.step("Перейти в каталог товаров"):
         pass
     with allure.step("В поле поиска ввести РП-012345"):
@@ -155,7 +150,6 @@ def test_article_search():
 @allure.feature("Поиск товаров")
 @allure.story("Основной поиск")
 def test_name_search():
-    lucky_sleep()
     with allure.step("Перейти в каталог товаров"):
         pass
     with allure.step("В поле поиска ввести Розовый пони"):
@@ -173,7 +167,6 @@ def test_name_search():
 @allure.feature("Поиск товаров")
 @allure.story("Основной поиск")
 def test_part_name_search():
-    lucky_sleep()
     with allure.step("Перейти в каталог товаров"):
         pass
     with allure.step("В поле поиска ввести Розовый"):
@@ -191,7 +184,6 @@ def test_part_name_search():
 @allure.feature("Просмотр и редактирование профиля")
 @allure.story("История заказов")
 def test_order_history():
-    lucky_sleep()
     with allure.step("Перейти в личный кабинет"):
         pass
     with allure.step("Нажать История заказов"):
@@ -217,7 +209,6 @@ def test_order_history():
 @allure.feature("Список товаров")
 @allure.story("Избранное")
 def test_show_favorite_items():
-    lucky_sleep()
     with allure.step("Перейти в избранное"):
         pass
     with allure.step("Убедиться что в избранном есть товары"):
@@ -231,7 +222,6 @@ def test_show_favorite_items():
 @allure.feature("Список товаров")
 @allure.story("Корзина")
 def test_items_in_card():
-    lucky_sleep()
     with allure.step("Перейти в корзину"):
         pass
     with allure.step("Убедиться что в корзине есть товары"):
