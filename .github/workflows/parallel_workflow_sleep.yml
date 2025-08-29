@@ -1,5 +1,5 @@
 # Название workflow
-name: parallel_workflow_testops
+name: parallel_workflow_sleep_testops
 
 # переменные окружения
 env:
