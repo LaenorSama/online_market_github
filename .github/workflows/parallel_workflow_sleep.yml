@@ -90,6 +90,18 @@ jobs:
         run: |
           mkdir -p ${ALLURE_RESULTS}
 
+      # создаем переменные запуска
+      - name: Create environment.properties
+        run: python create_environment_properties.py
+        env:
+          ALLURE_RESULTS: ${{ env.ALLURE_RESULTS }}
+          BROWSER: ${{ env.BROWSER }}
+          OS: ${{ env.OS }}
+          BRANCH: ${{ env.BRANCH }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          ALLURE_JOB_RUN_ID: ${{ env.ALLURE_JOB_RUN_ID }}
+
       # запускаем тесты и сразу следим за выполнением
       # отправляем данные в ТестОпс по мере поступления
       # -n auto автоматически запускает тесты во столько процессов сколько ядер в контейнере
