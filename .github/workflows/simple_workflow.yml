@@ -107,7 +107,7 @@ jobs:
         # специальные переменные окружения для allurectl
         env:
           ALLURE_LAUNCH_NAME: "Python Tests - ${{ github.run_id }}"
-          ALLURE_LAUNCH_PARAMETERS: ["build=${{ github.run_number }},branch=${{ github.ref_name }},commit=${{ github.sha }}"]
+          #ALLURE_LAUNCH_PARAMETERS: ["build=${{ github.run_number }},branch=${{ github.ref_name }},commit=${{ github.sha }}"]
           ALLURE_ENDPOINT: ${{ env.ENDPOINT }}
           ALLURE_TOKEN: ${{ env.TOKEN }}
           ALLURE_PROJECT_ID: ${{ env.PROJECT_ID }}
