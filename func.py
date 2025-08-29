@@ -1,5 +1,6 @@
 import random
 import pytest
+import time
 
 def lucky_step(chance: float = 0.6) -> None:
     """
@@ -55,3 +56,15 @@ def lucky_step(chance: float = 0.6) -> None:
             raise error_type(random.choice(broken_messages))
         elif outcome == "skipped":
             pytest.skip(random.choice(skipped_messages))
+
+def lucky_sleep(min_seconds: int = 10, max_seconds: int = 100) -> None:
+    """
+    Задержка выполнения теста на случайное время в диапазоне [min_seconds, max_seconds].
+    По умолчанию от 10 до 100 секунд.
+    """
+    if min_seconds < 0 or max_seconds < min_seconds:
+        raise ValueError("Некорректные параметры задержки")
+
+    delay = random.randint(min_seconds, max_seconds)
+    print(f"[lucky_sleep] Тест ждет {delay} секунд...")
+    time.sleep(delay)

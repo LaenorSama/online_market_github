@@ -8,6 +8,7 @@ from func import *
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("UX тестирование")
 def test_mobile_adaptive():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2308")
@@ -16,6 +17,7 @@ def test_mobile_adaptive():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("UX тестирование")
 def test_scale():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2309")
@@ -24,6 +26,7 @@ def test_scale():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("UX тестирование")
 def test_footer():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2310")
@@ -32,6 +35,7 @@ def test_footer():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("UX тестирование")
 def test_header():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2302")
@@ -40,6 +44,7 @@ def test_header():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("UX тестирование")
 def test_menu():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2312")
@@ -48,6 +53,7 @@ def test_menu():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("Нагрузочное тестирование")
 def test_order_time():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2281")
@@ -56,6 +62,7 @@ def test_order_time():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("Нагрузочное тестирование")
 def test_many_users():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2280")
@@ -64,6 +71,7 @@ def test_many_users():
 @allure.epic("Нагрузочное и UX тестирование")
 @allure.feature("Нагрузочное тестирование")
 def test_many_items():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2274")
@@ -73,6 +81,7 @@ def test_many_items():
 @allure.feature("Оформление заказа")
 @allure.story("Доставка")
 def test_default_delivery():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2313")
@@ -82,6 +91,7 @@ def test_default_delivery():
 @allure.feature("Оформление заказа")
 @allure.story("Доставка")
 def test_show_delivery_date():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2273")
@@ -91,6 +101,7 @@ def test_show_delivery_date():
 @allure.feature("Оформление заказа")
 @allure.story("Доставка")
 def test_order_without_delivery():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2279")
@@ -100,6 +111,7 @@ def test_order_without_delivery():
 @allure.feature("Оформление заказа", "Просмотр и редактирование профиля")
 @allure.story("История заказов")
 def test_show_order_in_history():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2263")
@@ -109,6 +121,7 @@ def test_show_order_in_history():
 @allure.feature("Оформление заказа")
 @allure.story("Оплата")
 def test_pay_with_valid_card():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2264")
@@ -118,6 +131,7 @@ def test_pay_with_valid_card():
 @allure.feature("Оформление заказа")
 @allure.story("Оплата")
 def test_cancel_pay():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2266")
@@ -127,6 +141,7 @@ def test_cancel_pay():
 @allure.feature("Оформление заказа")
 @allure.story("Оплата")
 def test_error_pay_wrong_card():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2265")
@@ -136,6 +151,7 @@ def test_error_pay_wrong_card():
 @allure.feature("Оформление заказа")
 @allure.story("Оплата")
 def test_error_pay_insufficient_funds():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2262")
@@ -145,6 +161,7 @@ def test_error_pay_insufficient_funds():
 @allure.feature("Оформление заказа")
 @allure.story("Оплата")
 def test_redirect_after_successful_pay():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2311")
@@ -154,6 +171,7 @@ def test_redirect_after_successful_pay():
 @allure.feature("Оформление заказа", "Просмотр и редактирование профиля")
 @allure.story("Текущие заказы")
 def test_show_order_in_current_orders():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2272")
@@ -163,6 +181,7 @@ def test_show_order_in_current_orders():
 @allure.feature("Просмотр и редактирование профиля")
 @allure.story("Текущие заказы")
 def test_change_order_status():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2258")
@@ -172,6 +191,7 @@ def test_change_order_status():
 @allure.feature("Список товаров")
 @allure.story("Страница товара")
 def test_three_product_images():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2249")
@@ -181,6 +201,7 @@ def test_three_product_images():
 @allure.feature("Список товаров")
 @allure.story("Страница товара")
 def test_description():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2261")
@@ -190,6 +211,7 @@ def test_description():
 @allure.feature("Список товаров")
 @allure.story("Страница товара")
 def test_show_alternative_items():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2259")
@@ -199,6 +221,7 @@ def test_show_alternative_items():
 @allure.feature("Список товаров")
 @allure.story("Страница товара")
 def test_stock_availability():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2303")
@@ -208,6 +231,7 @@ def test_stock_availability():
 @allure.feature("Список товаров")
 @allure.story("Страница товара")
 def test_show_specification():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2254")
@@ -217,6 +241,7 @@ def test_show_specification():
 @allure.feature("Список товаров")
 @allure.story("Страница товара")
 def test_show_price_in_roubles():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2269")
@@ -225,6 +250,7 @@ def test_show_price_in_roubles():
 @allure.epic("Безопасность")
 @allure.feature("Тесты безопасности")
 def test_csrf_at_checkout():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2282")
@@ -233,6 +259,7 @@ def test_csrf_at_checkout():
 @allure.epic("Безопасность")
 @allure.feature("Тесты безопасности")
 def test_sql_injection():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2267")
@@ -241,6 +268,7 @@ def test_sql_injection():
 @allure.epic("Безопасность")
 @allure.feature("Тесты безопасности")
 def test_xss_sql_injection():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2284")
@@ -249,6 +277,7 @@ def test_xss_sql_injection():
 @allure.epic("Безопасность")
 @allure.feature("Тесты безопасности")
 def test_personal_data_protection():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2283")
@@ -257,6 +286,7 @@ def test_personal_data_protection():
 @allure.epic("Безопасность")
 @allure.feature("Тесты безопасности")
 def test_spoofing_intercepting_cookies():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2248")
@@ -266,6 +296,7 @@ def test_spoofing_intercepting_cookies():
 @allure.feature("Фильтры")
 @allure.story("Фильтрация по категориям")
 def test_many_filters():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2247")
@@ -275,6 +306,7 @@ def test_many_filters():
 @allure.feature("Фильтры")
 @allure.story("Фильтрация по категориям")
 def test_resetting_filters():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2256")
@@ -284,6 +316,7 @@ def test_resetting_filters():
 @allure.feature("Фильтры")
 @allure.story("Фильтрация по категориям")
 def test_filter_by_category():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2317")
@@ -293,6 +326,7 @@ def test_filter_by_category():
 @allure.feature("Фильтры")
 @allure.story("Фильтрация по категориям")
 def test_filter_by_availability():
+    lucky_sleep()
     lucky_step()
 
 @allure.id("2257")
@@ -302,5 +336,6 @@ def test_filter_by_availability():
 @allure.feature("Фильтры")
 @allure.story("Фильтрация по категориям")
 def test_filter_by_price():
+    lucky_sleep()
     lucky_step()
 
