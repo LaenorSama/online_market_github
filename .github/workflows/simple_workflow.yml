@@ -92,9 +92,29 @@ jobs:
       # отправляем данные в ТестОпс по мере поступления
       - name: Run tests
         run: allurectl watch -- pytest --alluredir=${ALLURE_RESULTS} --capture=no
+        # специальные переменные окружения для allurectl
+        env:
+          ALLURE_LAUNCH_NAME: "Python Tests - ${{ github.run_id }}"
+          ALLURE_LAUNCH_PARAMETERS: "build=${{ github.run_number }},branch=${{ github.ref_name }},commit=${{ github.sha }}"
+          ALLURE_ENDPOINT: ${{ env.ENDPOINT }}
+          ALLURE_TOKEN: ${{ env.TOKEN }}
+          ALLURE_PROJECT_ID: ${{ env.PROJECT_ID }}
 
       # проверяем если файлы с отчетами
       - name: Check allure-results directory
         if: always()
         run: |
           ls -la ${ALLURE_RESULTS}
+      # альтернативный вариант через upload
+      #- name: Upload results to Allure TestOps
+      #  env:
+      #    ALLURE_ENDPOINT: ${{ env.ENDPOINT }}
+      #    ALLURE_TOKEN: ${{ env.TOKEN }}
+      #  run: |
+      #    allurectl upload \
+      #      --project-id ${{ env.PROJECT_ID }} \
+      #      --launch-name "Python Tests - ${{ github.run_id }}" \
+      #      --launch-parameter build=${{ github.run_number }} \
+      #      --launch-parameter branch=${{ github.ref_name }} \
+      #      --launch-parameter commit=${{ github.sha }} \
+      #      --results ${ALLURE_RESULTS}
