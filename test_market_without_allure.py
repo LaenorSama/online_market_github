@@ -259,15 +259,6 @@ def test_personal_data_protection():
 def test_spoofing_intercepting_cookies():
     lucky_step()
 
-@allure.id("2248")
-@allure.title("Одновременная работа нескольких фильтров")
-@allure.label("owner", "Alex")
-@allure.epic("Поиск и каталог товаров")
-@allure.feature("Фильтры")
-@allure.story("Фильтрация по категориям")
-def test_many_filters():
-    lucky_step()
-
 @allure.id("2247")
 @allure.title("Сброс фильтров")
 @allure.label("owner", "Alex")
@@ -275,24 +266,6 @@ def test_many_filters():
 @allure.feature("Фильтры")
 @allure.story("Фильтрация по категориям")
 def test_resetting_filters():
-    lucky_step()
-
-@allure.id("2256")
-@allure.title("Фильтрация по категориям")
-@allure.label("owner", "Alex")
-@allure.epic("Поиск и каталог товаров")
-@allure.feature("Фильтры")
-@allure.story("Фильтрация по категориям")
-def test_filter_by_category():
-    lucky_step()
-
-@allure.id("2317")
-@allure.title("Фильтрация по наличию на складе")
-@allure.label("owner", "Alex")
-@allure.epic("Поиск и каталог товаров")
-@allure.feature("Фильтры")
-@allure.story("Фильтрация по категориям")
-def test_filter_by_availability():
     lucky_step()
 
 @allure.id("2257")
