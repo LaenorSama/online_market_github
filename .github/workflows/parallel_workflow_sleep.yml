@@ -11,6 +11,7 @@ env:
   BROWSER: ${{ inputs.BROWSER || 'OperaGX' }}
   OS: ${{ inputs.OS || 'Win_11' }}
   BRANCH: ${{ github.ref_name }}
+  # два параметра, чтобы замедлить выполнение тестов
   LUCKY_SLEEP_MIN: 10
   LUCKY_SLEEP_MAX: 100
 
